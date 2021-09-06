@@ -13,10 +13,10 @@ config :reproducer,
 # Configures the endpoint
 config :reproducer, ReproducerWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "bEmcFMRkfB9vMVKpNqYzIHUIRbf2ob7ZnpBGTWTGQ+AgnENie6P7KNqITZXHzoHu",
+  secret_key_base: "fSpSbyUQ1/9uuC3Ejo7P0AWHCTh5eXfYG80JyJ5st0E/GAXjs+vrDY2UXbdC7Cpu",
   render_errors: [view: ReproducerWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: Reproducer.PubSub,
-  live_view: [signing_salt: "zo+96N+N"]
+  live_view: [signing_salt: "1Gj6BgsW"]
 
 # Configures Elixir's Logger
 config :logger, :console,

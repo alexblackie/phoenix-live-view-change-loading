@@ -7,7 +7,7 @@ defmodule ReproducerWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_reproducer_key",
-    signing_salt: "qyYjhBaD"
+    signing_salt: "r/frl0u7"
   ]
 
   socket "/socket", ReproducerWeb.UserSocket,
