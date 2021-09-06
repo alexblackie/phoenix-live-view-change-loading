@@ -2,6 +2,26 @@
   <h1><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h1>
   <p>Peace of mind from prototype to production</p>
 
+<style>
+#myFileForm.phx-change-loading {
+  background-color: lightyellow;
+}
+#myFileForm .phx-change-loading {
+  border: 2px solid red
+}
+</style>
+
+  <form phx-change="noop" phx-submit="save" id="myFileForm">
+    <%= live_file_input @uploads.testfile %>
+    <button type="submit">gogo live file uploader</button>
+  </form>
+
+  <ul>
+    <%= for file <- @uploaded_files do %>
+      <li><%= file %></li>
+    <% end %>
+  </ul>
+
   <form phx-change="suggest" phx-submit="search">
     <input type="text" name="q" value="<%= @query %>" placeholder="Live dependency search" list="results" autocomplete="off"/>
     <datalist id="results">
